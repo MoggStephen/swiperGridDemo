@@ -7,5 +7,4 @@ This is a showcase of a fluid responsive swiper grid layout.
 - Bootstrap interacts with the wrapper somehow to stop it from pushing to the left and the right of the screen. Havent figured out how yet.
 - In order to stop the last page from not being done properly you have to fill up empty sliders so that the functionality works.
 - Lazy loading of elements using swiper-lazy-preloader to display a progress circle on the element that is being loaded.
-
-- Possible changes of layout within element for different screen sizes!
+- Breakpoints within js to change layout on different screen sizes! Changing the screen of the page doesnt seem to be change the layout sometimes. Reloading the swiper using a reload function on event listener window screen size change might help! Sometimes pagination can be destroyed from setting it false on smallest screen size so this might be neccessary. Might also need to make sure the empty swiper slides dont cause issues on smaller screens!

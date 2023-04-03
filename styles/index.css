@@ -77,6 +77,9 @@ body {
 .page-container .swiper-container .navigation .swiper-button-prev:after {
   content: "←";
 }
+.page-container .swiper-container .navigation .swiper-button-next {
+  margin-left: auto !important;
+}
 .page-container .swiper-container .navigation .swiper-button-next:after {
   content: "→";
 }/*# sourceMappingURL=index.css.map */

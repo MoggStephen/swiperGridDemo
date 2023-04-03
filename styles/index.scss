@@ -91,8 +91,6 @@ body {
                 color: black;
                 padding: 0.25rem;
                 width: fit-content !important;
-
-
             }
             .swiper-button-prev{
                 &:after{
@@ -100,6 +98,8 @@ body {
                 }
             }
             .swiper-button-next{
+                //For when pagination is false on smallest screen size breakpoint!
+                margin-left: auto !important;
                 &:after{
                     content: "\2192";
                     
