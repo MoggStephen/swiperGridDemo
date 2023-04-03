@@ -1,0 +1,82 @@
+@charset "UTF-8";
+html {
+  background: lightskyblue;
+}
+
+body {
+  background: lightgreen;
+}
+
+* {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .swiper-container {
+  background: lightcoral;
+  width: min(100%, 42.188rem);
+  max-width: max(21.875rem, 100%);
+  overflow: hidden;
+}
+.page-container .swiper-container .swiper-wrapper {
+  background: lightseagreen;
+}
+.page-container .swiper-container .swiper-wrapper .swiper-slide {
+  background: lightyellow;
+  padding: 1rem !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .swiper-container .swiper-wrapper .swiper-slide .content img {
+  width: 100% !important;
+}
+.page-container .swiper-container .swiper-wrapper .swiper-slide .content .text h2 {
+  font-size: 1rem;
+}
+.page-container .swiper-container .swiper-wrapper .swiper-slide .content .text p {
+  font-size: 0.8rem;
+}
+.page-container .swiper-container .navigation {
+  display: flex;
+  background: lightslategray;
+  align-items: center;
+}
+.page-container .swiper-container .navigation .swiper-pagination {
+  position: static !important;
+}
+.page-container .swiper-container .navigation .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: hsl(0, 0%, 71%);
+  opacity: 1;
+  background: rgba(0, 0, 0, 0);
+  margin: 0 0.5rem !important;
+}
+.page-container .swiper-container .navigation .swiper-pagination-bullet-active {
+  color: white;
+  background: hsl(34, 98%, 47%);
+}
+.page-container .swiper-container .navigation .swiper-button-prev, .page-container .swiper-container .navigation .swiper-button-next {
+  position: static !important;
+  color: black;
+  padding: 0.25rem;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+.page-container .swiper-container .navigation .swiper-button-prev:after {
+  content: "←";
+}
+.page-container .swiper-container .navigation .swiper-button-next:after {
+  content: "→";
+}/*# sourceMappingURL=index.css.map */

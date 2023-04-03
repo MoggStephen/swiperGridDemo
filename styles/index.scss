@@ -1,0 +1,110 @@
+html{
+    background: lightskyblue;
+}
+body {
+    background: lightgreen;
+}
+*{
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-container{
+        background: lightcoral;
+
+        width: min(100%, 42.188rem) ;
+        max-width: max(21.875rem, 100%);
+
+        //DONT USE PADDING ON CONTAINER
+        //THIS CAUSES SLIDES TO PEEK ON THE SIDES
+    
+        // NEED OVERFLOW HIDDEN
+        overflow: hidden;
+        
+        .swiper-wrapper{
+            // On start pagination, this extends into the width to the right naturally
+            // On middle pagination, this extends into left and right
+            // On end pagination, This extends into the left.
+            //   - Which is why we need overflow: hidden!
+            // DO NOT SET WIDTH HERE
+            
+            background: lightseagreen;
+            //Bootstrap seems to stop this from container from pushing to the right and left of the screen
+            //Not sure if this could cause issues with elements to the left and right of swiper
+            
+            .swiper-slide{
+                background: lightyellow;
+                padding: 1rem !important;
+    
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .content{
+                    img{              
+                        width: 100% !important;
+                    }
+                    .text{
+                        //Font Sizes limit swiper-slides max-width and causes the images to collide at around 370px
+                        //The layout will likely change to a mobile version when this happens so might not be an issue!
+                        h2{
+                            font-size: 1rem;
+                        }   
+                        p{
+                            font-size: 0.8rem;
+                        }               
+                    }
+                }    
+            }
+        }
+        
+        .navigation{
+            display: flex;
+            background: lightslategray;
+            align-items: center;
+            .swiper-pagination{
+                position: static !important;
+                
+            }
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                color: hsl(0, 0%, 71%);
+                opacity: 1;
+                background: rgba(0, 0, 0, 0);
+                margin: 0 0.5rem !important;
+            }
+            .swiper-pagination-bullet-active {
+                color: white;
+                background: hsl(34, 98%, 47%);
+            }
+            .swiper-button-prev, .swiper-button-next{
+                position: static !important;
+                color: black;
+                padding: 0.25rem;
+                width: fit-content !important;
+
+
+            }
+            .swiper-button-prev{
+                &:after{
+                    content: "\2190";
+                }
+            }
+            .swiper-button-next{
+                &:after{
+                    content: "\2192";
+                    
+                }
+            }
+        }    
+    }
+}
